@@ -1,0 +1,31 @@
+{
+  "name": "taxation_project",
+  "version": "1.0.0",
+  "description": "See double taxation treaties between two countries.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon src/server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makeorbreak-io/the-unlikely-heroes.git"
+  },
+  "keywords": [
+    "international",
+    "taxation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makeorbreak-io/the-unlikely-heroes/issues"
+  },
+  "homepage": "https://github.com/makeorbreak-io/the-unlikely-heroes#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
