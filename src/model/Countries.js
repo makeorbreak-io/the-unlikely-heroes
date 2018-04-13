@@ -9,7 +9,7 @@ const Country = new Schema ({
   residenceCountry: {type: String, required: true},
   sourceUrl: {type: String, required: false},
   dateAgreement: {type: Date, required: false},
-  dafeInforcement: {type: Date, required: false},
+  dateInforcement: {type: Date, required: false},
   salary: {type: Number, required: true},
   directorFee: {type: String, required: false},
   immovableProfit: {type: Number, required: false},
