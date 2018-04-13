@@ -15,22 +15,12 @@ let express = require('express'),
  */
 require('./../config/config');
 let PORT = process.env.PORT | 3000;
-let path = __dirname + 'views/';
-let router = express.Router();
-
-
-/**
- * This next part is related with the website. 
- */
-router.use(function (req, res, next) {
-  console.log('/', req.method);
-  next();
-});
+let path = __dirname + '/views/';
 
 /**
  * Should render the initial page.
  */
-router.get('/', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path + 'index.html');
 });
 
@@ -38,3 +28,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
+
+app.listen(PORT, function () {
+  console.log(`Opened API on PORT ${PORT}`);
+});
