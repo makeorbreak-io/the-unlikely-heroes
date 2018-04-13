@@ -30,5 +30,5 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.listen(PORT, function () {
-  console.log(`Opened API on PORT ${PORT}`);
+  console.log(`Website is being rendered on PORT ${PORT}`);
 });

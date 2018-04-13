@@ -2,7 +2,7 @@
 
 /**
  * REST API routes to GET countries. You can retrieve all or find one by id (which is the name)
- * @param {} app 
+ * @param {Express application} app is the application that will call this method.
  */
 module.exports = function(app) {
   var countryList = require('../controller/GetAllCountries');
