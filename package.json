@@ -6,7 +6,6 @@
   "scripts": {
     "test": "npm test",
     "start": "nodemon src/server.js"
-
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,9 @@
   },
   "homepage": "https://github.com/makeorbreak-io/the-unlikely-heroes#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongoose": "^5.0.14",
+    "mongoose-schema-jsonschema": "^1.1.15"
   },
   "devDependencies": {
     "nodemon": "^1.17.3"
