@@ -366,7 +366,7 @@ a {
     text-transform: uppercase;
     color: red;
     line-height: 1.7;
-    font-size: 19px;
+    font-size: 24px;
 }
 
 /* Homepage */
@@ -377,8 +377,8 @@ a {
 }
 
 .button{
-    position: fixed;
-    top: 70%;
+    position: absolute;
+    top: 67%;
     left: 50%;
     border: 0;
     /* bring your own prefixes */
@@ -406,7 +406,7 @@ a {
     color: red;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 /*3screen */
@@ -448,7 +448,7 @@ footer {
 
 @media (max-width: 991px) {
     .button{
-        width: 30%;
+        width: 33%;
     }
 }
 
@@ -467,7 +467,7 @@ footer {
         font-size: 23px;
     }
     .button{
-        width: 30%;
+        width: 33%;
     }
     
 }
@@ -481,7 +481,7 @@ footer {
     }
 
     .button{
-        width: 30%;
+        width: 33%;
     }
 }
 
@@ -491,15 +491,16 @@ footer {
     }
 
     .button{
-        width: 30%;
+        width: 33%;
+        top: 70%;
+    }
+    
+    th, td {
+        padding: 2px;
     }
 
-    .box-intro{
-
-    }
-
-    .box-intro .table-cell{
-        
+    th{
+        font-size: 16px;
     }
     
 }
