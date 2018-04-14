@@ -21,7 +21,6 @@ describe('Test route testing', () => {
       .get('/hello')
       .expect(200)
       .expect((res) => {
-        console.log(res.text);
         expect(JSON.parse(res.text).sample).toEqual(expectedResult)
       })
       .end(done);
