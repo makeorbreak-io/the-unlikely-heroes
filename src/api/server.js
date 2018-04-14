@@ -1,9 +1,11 @@
+"use strict";
+
 /**
  * API Server configs and local modules
  */
 // require('./../config/config'); 
 let {mongoose} = require('./db/mongoose');
-let {Country} = require('./model/Countries');
+let Country = require('./model/Country');
 
 /**
  * Third-party modules
@@ -21,7 +23,8 @@ app.use(bodyParser.json());
 /**
  * Activates REST API routes.
  */
-app.get('/hello', require('./routes/testRoute').router);
+app.get('/hello', require('./routes/testRoute').router); // Just for testing and debugging purposes.
+app.get('/countries', require('./routes/GetAllCountriesRoute').getAllCountries);
 
 
 /**
@@ -30,3 +33,7 @@ app.get('/hello', require('./routes/testRoute').router);
 app.listen(PORT, function () {
   console.log(`Opened API on PORT ${PORT}`);
 });
+
+module.exports = {
+  app
+}
