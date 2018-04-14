@@ -6,4 +6,9 @@ $(window).load(function () {
     $('body').delay(550).css({
         'overflow': 'visible'
     });
+
+
+    //verify on database
+    
+    
 });
