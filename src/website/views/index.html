@@ -7,14 +7,20 @@
     <title>Wild Powers</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../css/ionicons.min.css" rel="stylesheet"> -->
 
     <!-- main css -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
     <!-- modernizr -->
     <!--<script src="js/modernizr.js"></script>-->
+
+    <link href="../css/views/bootstrap.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 
@@ -32,7 +38,6 @@
 
     <div class="container-fluid">
         <header class="box-header">
-                <!--<a href="index.html">-->
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
@@ -42,9 +47,9 @@
         <!-- nav -->
         <nav>
             <ul class="box-primary-nav">
-                <li class="box-label">Home</li>
-                <li><a href="index.html">Intro</a></li>
-                <li><a href="about.html">Info</a></li>
+                <li class="box-label"><a href="index.html">Home</a></li>
+                <!--<li><a href="index.html">INTRO</a></li>-->
+                <li><a href="#">INFO</a></li>
             </ul>
         </nav>
         <!-- end nav -->
@@ -54,36 +59,23 @@
             <div class="table-cell">
                 <h4>In which country are you tax resident?</h4>
 
-            <select class="dropdown_selectCountry">
-                <option value="portugal">Portugal</option>
-                <option value="uk">Uk</option>
-                <option value="romenia">Romenia</option>
-                <option value="jersey">Jersey</option>
-            </select>
+            <div id="residenceSection"> </div>
 
             </div>
             <div class="table-cell">
                 <h4>From which country does your income come?</h4>
             
+			<div id="incomeSection"> </div>
 
-            <select class="dropdown_selectCountry">
-                <option value="portugal">Portugal</option>
-                <option value="uk">Uk</option>
-                <option value="romenia">Romenia</option>
-                <option value="jersey">Jersey</option>
-            </select>
             </div>
-            
 
-            
 
+        <a href="../views/2screen.html"><button class="button">GO NOW!</button></a>
             
         </section>
             
-        <section></section>
     
     </div>
-
 
     <!-- footer -->
     <footer>
@@ -93,14 +85,14 @@
     </footer>
     <!-- end footer -->
 
-
     <!-- jQuery -->
-    <script src="js/jquery-2.1.1.js"></script>
+    <script src="../js/jquery-2.1.1.js"></script>
     <!--  plugins -->
-    <script src="js/menu.js"></script>
+    <script src="../js/menu.js"></script>
 
     <!--  custom script -->
-    <script src="js/custom.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/countries.js"></script>
 
 </body>
 
