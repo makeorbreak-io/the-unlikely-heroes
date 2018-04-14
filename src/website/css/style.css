@@ -377,7 +377,7 @@ a {
 }
 
 .button{
-    position: fixed;
+    position: absolute;
     top: 67%;
     left: 50%;
     border: 0;
