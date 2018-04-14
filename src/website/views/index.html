@@ -30,6 +30,24 @@
         </div>
     </div>
 
+    <button type='submit' onclick="request()">Request</button>
+    <script type='text/javascript'>
+        function request() {
+            let perform = new XMLHttpRequest();
+            perform.open('GET', 'http://localhost:3000/countries', true);
+            perform.responseType = 'text';
+            
+            perform.onload = function() {
+                if(perform.readyState === perform.DONE && perform.status === 200) {
+                    console.log(perform.response);
+                    console.log(perform.responseText);
+}
+            }
+            perform.send(null)
+            }
+            console.log(response.open());
+    </script>
+
     <div class="container-fluid">
         <header class="box-header">
             <!-- box-nav -->
