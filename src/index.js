@@ -1,2 +1,2 @@
-require('./api');
-require('./website');
+require('./api/server');
+require('./website/server');

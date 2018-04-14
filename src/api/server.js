@@ -49,7 +49,7 @@ app.get('/countries', require('./routes/GetAllCountriesRoute').router);
 /**
  * Lets the app listen to requests.
  */
-app.listen(PORT, function () {
+app.listen(3000, function () {
   console.log(`Opened API on PORT ${PORT}`);
 });
 
