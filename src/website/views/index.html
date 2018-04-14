@@ -33,6 +33,7 @@
     <button type='submit' onclick="request()">Request</button>
     <script type='text/javascript'>
         function request() {
+<<<<<<< HEAD
             let perform = new XMLHttpRequest();
             perform.open('GET', 'http://localhost:3000/countries', true);
             perform.responseType = 'text';
@@ -46,13 +47,30 @@
             perform.send(null)
             }
 //            console.log(response.open());
+=======
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "http://localhost:3000/sources", false);
+            xmlhttp.send(null);
+            var result = xmlhttp.responseText;
+            var myElement = document.getElementById("test");
+            var jsonResult = JSON.parse(result);
+            console.log(JSON.stringify(jsonResult['countries'][0]["source"]));
+            var text = document.createTextNode(JSON.stringify(jsonResult['countries'][0]));
+            myElement.appendChild(text);
+        }
+>>>>>>> cd0b6b5693953b677f1a99307365a15eac7892d6
     </script>
+
+    <h1 id="test">
+        lol
+    </h1>
 
     <div class="container-fluid">
         <header class="box-header">
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+                <span class="box-menu-text">Menu</span>
+                <span class="box-menu-icon"></span>
             </a>
         </header>
 
@@ -69,25 +87,37 @@
             <div class="table-cell">
                 <h4>In which country are you tax resident?</h4>
 
-            <div id="residenceSection"> </div>
-                
+                <div id="residenceSection"> </div>
+
             </div>
             <div class="table-cell">
                 <h4>From which country does your income come?</h4>
-            
-			<div id="incomeSection"> </div>
+
+                <div id="incomeSection"> </div>
 
             </div>
 
 
+<<<<<<< HEAD
+            <!--       <a href="./2screen.html"><button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button></a>  -->
+
+            <button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button>
+
+||||||| merged common ancestors
+ <!--       <a href="./2screen.html"><button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button></a>  -->
+         
+         <button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button>
+            
+=======
  <!--       <a href="./2screen.html"><button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button></a>  -->
             <div class="table-cell">
                 <button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button>
             </div>
             
+>>>>>>> f7d13d75609114006f598124d6715ee5603b4544
         </section>
-            
-    
+
+
     </div>
 
     <!-- footer -->
@@ -106,7 +136,33 @@
     <!--  custom script -->
     <script src="../js/custom.js"></script>
     <script src="../js/countries.js"></script>
+<<<<<<< HEAD
+
+    <script>
+        function checkDTA() {
+            if (false) {
+                //$("#result").append("<p>There is a DTA</p>")
+                console.log("There is a DTA")
+            } else {
+                //		$("#result").append("<p>There is no DTA</p>")
+                console.log("There is no DTA")
+            }
+        }
+    </script>
+||||||| merged common ancestors
     
+    <script> function checkDTA() {
+	if (false) {
+		//$("#result").append("<p>There is a DTA</p>")
+		console.log("There is a DTA")
+	} else {
+//		$("#result").append("<p>There is no DTA</p>")
+		console.log("There is no DTA")
+	}
+}</script>
+=======
+    
+<<<<<<< HEAD
 <<<<<<< HEAD
     <script> function checkDTA() {
     require("../js/countries.js")
@@ -121,6 +177,8 @@
 	}
 }</script>
 =======
+=======
+>>>>>>> cd0b6b5693953b677f1a99307365a15eac7892d6
 >>>>>>> f7d13d75609114006f598124d6715ee5603b4544
 </body>
 

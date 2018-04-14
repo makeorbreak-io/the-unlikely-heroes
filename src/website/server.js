@@ -14,7 +14,7 @@ let express = require('express'),
  * Constants and global variable declarations.
  */
 require('./../config/config');
-let PORT = process.env.PORT | 3000;
+let PORT = 8000;    // We are hard coding the port we want the site to work ON to allow both apps to work properly.
 let path = __dirname + '/views/';
 
 /**
