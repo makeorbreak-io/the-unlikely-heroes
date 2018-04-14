@@ -45,7 +45,7 @@
             }
             perform.send(null)
             }
-            console.log(response.open());
+//            console.log(response.open());
     </script>
 
     <div class="container-fluid">
@@ -107,6 +107,9 @@
     <script src="../js/countries.js"></script>
     
     <script> function checkDTA() {
+    require("../js/countries.js")
+	console.log(countryDB[0].country)
+	
 	if (false) {
 		//$("#result").append("<p>There is a DTA</p>")
 		console.log("There is a DTA")
