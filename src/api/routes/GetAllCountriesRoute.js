@@ -10,8 +10,10 @@ let getAllCountriesController = require('./../controller/GetAllCountries').list_
  * REST API routes to GET countries. You can retrieve all or find one by id (which is the name)
  * @param {Express application} app is the application that will call this method.
  */
+router.get('/countries', function(req, res) {
+    res.send({getAllCountriesController});
+});
+
 module.exports = {
-  getAllCountries: ((req, res) => {
-    res.send(JSON.stringify(getAllCountriesController));
-  }),
-};
+  router
+}

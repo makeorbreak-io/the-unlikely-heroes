@@ -1,5 +1,5 @@
 const {ObjectId} = require('mongodb');
-const {countryModel} = require('./../../model/Country');
+const Country = require('./../../model/Country').Country;
 
 /**
  * Creates two mocks for testing countries api and database setup.
@@ -13,7 +13,7 @@ const countryTwoId = new ObjectId;
 /**
  * Due to the complexity of the model, the seed only manages a couple connections for the time being.
  */
-const countries = [
+const Countries = [
 {
   residenceCountry: countryOneName,
   salary: 1000
@@ -21,19 +21,16 @@ const countries = [
 {
   residenceCountry: countryTwoName,
   salary: 500
-}];
+}
+];
 
 const populateWithCountries = ((done) => {
-  countryModel.remove({}).then(() => {
-    var countryOne = new countryModel(countries[0]).save();
-    var countryTwo = new countryModel(countries[1]).save();
-
-    return Promise.all([countryOne, countryTwo])
+  Country.remove({}).then(() => {
+    return Country.insertMany(Countries);
   }).then(() => done());
 });
 
 module.exports = {
-  countries,
+  Countries,
   populateWithCountries
-}
-
+};

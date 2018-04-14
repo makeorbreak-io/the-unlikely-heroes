@@ -10,7 +10,7 @@ let router = express.Router();
 let sample = 'Some text to display';
 router.get('/hello', function (req, res) {
   res.send(sample);
-})
+});
 
 module.exports = {
   sample,

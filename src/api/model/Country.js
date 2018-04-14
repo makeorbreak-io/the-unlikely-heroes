@@ -2,9 +2,7 @@
 
 let mongoose = require('mongoose');
 
-let Schema = mongoose.Schema;
-
-let _countrySchema = new Schema({
+let Country = mongoose.model('Country', {
   residenceCountry: {
     type: String,
     required: true,
@@ -69,8 +67,6 @@ let _countrySchema = new Schema({
   }
 });
 
-let countryModel = mongoose.model('CountryModel', _countrySchema);
-
 module.exports = {
-  countryModel
+  Country
 }
