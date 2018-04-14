@@ -1,3 +1,4 @@
+"use strict";
 /**
  * JavaScript module that creates the API server.
  * For MoB contest.
@@ -27,6 +28,8 @@ app.get('/', function (req, res) {
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+console.log(__dirname);
+app.use(express.static(__dirname));
 app.use(bodyParser.json());
 
 app.listen(8000, function () {
