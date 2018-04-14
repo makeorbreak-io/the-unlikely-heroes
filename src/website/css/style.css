@@ -46,24 +46,6 @@ a {
     font-size: 11px;
 }
 
-
-/* typography */
-
-h1 {
-    color: #393939;
-    font-size: 60px;
-    text-transform: uppercase;
-}
-
-h3 {
-    color: #393939;
-}
-
-h5 {
-    color: #ffbf00;
-}
-
-
 /* preloader */
 
 #preloader {
@@ -384,19 +366,19 @@ h5 {
     text-transform: uppercase;
     color: red;
     line-height: 1.7;
-    font-size: 17px;
+    font-size: 24px;
 }
 
-/* Dropdown */
+/* Homepage */
 
+/* Dropdown */
 .dropdown_selectCountry{
     margin: 0 auto;
 }
 
-
 .button{
-    position: fixed;
-    top: 70%;
+    position: absolute;
+    top: 67%;
     left: 50%;
     border: 0;
     /* bring your own prefixes */
@@ -416,8 +398,40 @@ h5 {
     border: 2px solid red;
     color: red;
 }
-/* footer */
 
+
+/* 2screen */
+
+#result h2{
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+/*3screen */
+
+th, td {
+    padding: 4px;
+}
+
+th{
+    color: red;
+    font-size: 18px;
+}
+
+td{
+    color: white;
+}
+
+.table-cell > table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+/* footer */
 footer {
     padding: 15px;
     text-align: center;
@@ -434,7 +448,7 @@ footer {
 
 @media (max-width: 991px) {
     .button{
-        width: 30%;
+        width: 33%;
     }
 }
 
@@ -453,7 +467,7 @@ footer {
         font-size: 23px;
     }
     .button{
-        width: 30%;
+        width: 33%;
     }
     
 }
@@ -467,7 +481,7 @@ footer {
     }
 
     .button{
-        width: 30%;
+        width: 33%;
     }
 }
 
@@ -477,15 +491,16 @@ footer {
     }
 
     .button{
-        width: 30%;
+        width: 33%;
+        top: 70%;
+    }
+    
+    th, td {
+        padding: 2px;
     }
 
-    .box-intro{
-
-    }
-
-    .box-intro .table-cell{
-        
+    th{
+        font-size: 16px;
     }
     
 }

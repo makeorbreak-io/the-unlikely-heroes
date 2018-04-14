@@ -7,8 +7,17 @@ $(window).load(function () {
         'overflow': 'visible'
     });
 
+    //button index
+    function checkDTA() {
+	if (false) {
+		//$("#result").append("<p>There is a DTA</p>")
+		console.log("There is a DTA");
+	} else {
+//		$("#result").append("<p>There is no DTA</p>")
+		console.log("There is no DTA");
+	}
+}
 
-    //verify on database
     
     
 });
