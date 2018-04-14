@@ -5,11 +5,11 @@ require('./../config/config')
 /**
  * API Server configs and local modules
  */
-// require('./../config/config'); 
+require('./../config/config');
 let {
   mongoose
 } = require('./db/mongoose');
-let Country = require('./model/Country');
+let Country = require('./model/Country').Country;
 
 /**
  * Third-party modules
@@ -22,28 +22,38 @@ const fs = require('fs');
  * Server initialization and Port definition
  */
 let app = express();
-let PORT = process.env.PORT;
+let PORT = 3000; // We are hard coding the API PORT we want to allow both apps to work.
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(bodyParser.json());
 
 /**
  * Populates database with country data from JSON file..
  */
-
-// fs.readFile(__dirname + '/db/APIcallTemplate.json', 'utf8', function(err, data) {
-//   if (err) throw err;
-//   console.log(data);
-//   let jsonDataFormat = JSON.parse(data);
-//   mongoose.configuration.insert(data, function(err, doc) {
-//     console.log(doc);
-//     if(err) throw err;
-//   });
-// });
+mongoose.connection.on('connected', function () {
+  mongoose.connection.db.dropDatabase();
+  fs.readFile(__dirname + '/db/APIcallTemplate.json', 'utf8', function (err, data) {
+    console.log('Writing sample data to the database and deleting any seed.');
+    if (err) throw err;
+    Country.insertMany((JSON.parse(data)["countries"]), function (err, doc) {
+      if (err) {
+        throw err;
+      } else {
+        console.log('Data generated successfully.')
+      };
+    });
+  });
+});
 
 /**
  * Activates REST API routes.
  */
 app.get('/hello', require('./routes/testRoute').router); // Just for testing and debugging purposes.
-app.get('/countries', require('./routes/GetAllCountriesRoute').router);
+app.get('/sources', require('./routes/GetAllCountriesRoute').router);
 
 
 /**

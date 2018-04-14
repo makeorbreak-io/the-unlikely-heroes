@@ -24,6 +24,16 @@ router.get('/countries', function (req, res) {
   });
 });
 
+router.get('/sources', function (req, res) {
+  Country.distinct('source').then((countries) => {
+    res.send({
+      countries
+    });
+  }, (err) => {
+    res.status(400).send(err);
+  });
+});
+
 module.exports = {
   router
 }
