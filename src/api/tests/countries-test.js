@@ -14,7 +14,7 @@ const {
   app
 } = require('./../server');
 const {
-  countries,
+  Countries,
   populateWithCountries
 } = require('./seed/country-seed');
 
@@ -26,7 +26,7 @@ describe('Tests for the GET countries API HTTP method.', () => {
       .get('/countries')
       .expect(200)
       .expect((res) => {
-        expect(res.text).toBe('');
+        expect(res.text[0]["residenceCountry"]).toBe(Countries[0]["residencyCountry"]);
       })
       .end(done);
   });

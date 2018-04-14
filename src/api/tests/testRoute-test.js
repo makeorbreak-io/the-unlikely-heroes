@@ -14,14 +14,15 @@ const {
   app
 } = require('./../server');
 
-describe('Test rout testing', () => {
-  it("it should return 'Some text to display'.", (done) => {
-    let result = require('./../routes/testRoute').sample;
+describe('Test route testing', () => {
+  it("it should return 'Some text to display' in JSON format.", (done) => {
+    let expectedResult = 'Some text to display';
     request(app)
       .get('/hello')
       .expect(200)
       .expect((res) => {
-        expect(res.text).toEqual(result)
+        console.log(res.text);
+        expect(JSON.parse(res.text).sample).toEqual(expectedResult)
       })
       .end(done);
   });
