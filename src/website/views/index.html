@@ -13,8 +13,6 @@
     <!-- main css -->
     <link href="../css/style.css" rel="stylesheet">
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
     <!-- main css -->
     <link href="../css/style.css" rel="stylesheet">
 
@@ -84,7 +82,9 @@
             </div>
 
 
-        <a href="../views/2screen.html"><button class="button">GO NOW!</button></a>
+ <!--       <a href="./2screen.html"><button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button></a>  -->
+         
+         <button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button>
             
         </section>
             
@@ -107,7 +107,16 @@
     <!--  custom script -->
     <script src="../js/custom.js"></script>
     <script src="../js/countries.js"></script>
-
+    
+    <script> function checkDTA() {
+	if (false) {
+		//$("#result").append("<p>There is a DTA</p>")
+		console.log("There is a DTA")
+	} else {
+//		$("#result").append("<p>There is no DTA</p>")
+		console.log("There is no DTA")
+	}
+}</script>
 </body>
 
 </html>

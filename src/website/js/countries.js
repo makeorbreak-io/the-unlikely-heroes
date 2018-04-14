@@ -1,7 +1,14 @@
 $(document).ready(function(){
 
 //var json = require("../../db/APIcallTemplate.json");
-var countries = {option1:{value:"Portugal", text:"Portugal"},option2:{value:"UK",text:"UK"}}
+
+
+var countries = {
+option1:{value:"Portugal", text:"Portugal"},
+option2:{value:"UK",text:"UK"},
+option3:{value:"Jersey", text:"Jersey"},
+option4:{value:"Romania", text: "Romania"}
+}
 	
 	//Prepopulate the dropdown menues with the countries we have.
 var residenceSelect = document.createElement("select");
