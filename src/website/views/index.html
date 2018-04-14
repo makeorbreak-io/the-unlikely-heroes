@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <!-- <link href="../css/ionicons.min.css" rel="stylesheet"> -->
 
     <!-- main css -->
     <link href="../css/style.css" rel="stylesheet">
@@ -17,6 +17,15 @@
     <!--<script src="js/modernizr.js"></script>-->
 
 </head>
+
+    <!-- jQuery -->
+    <script src="../js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="../js/menu.js"></script>
+
+    <!--  custom script -->
+    <script src="../js/custom.js"></script>
+    <script src="../js/countries.js"></script>
 
 <body>
 
@@ -54,24 +63,14 @@
             <div class="table-cell">
                 <h4>In which country are you tax resident?</h4>
 
-            <select class="dropdown_selectCountry">
-                <option value="portugal">Portugal</option>
-                <option value="uk">Uk</option>
-                <option value="romenia">Romenia</option>
-                <option value="jersey">Jersey</option>
-            </select>
+            <div id="residenceSection"> </div>
 
             </div>
             <div class="table-cell">
                 <h4>From which country does your income come?</h4>
             
+			<div id="incomeSection"> </div>
 
-            <select class="dropdown_selectCountry">
-                <option value="portugal">Portugal</option>
-                <option value="uk">Uk</option>
-                <option value="romenia">Romenia</option>
-                <option value="jersey">Jersey</option>
-            </select>
             </div>
             
 
@@ -94,14 +93,7 @@
     <!-- end footer -->
 
 
-    <!-- jQuery -->
-    <script src="../js/jquery-2.1.1.js"></script>
-    <!--  plugins -->
-    <script src="../js/menu.js"></script>
 
-    <!--  custom script -->
-    <script src="../js/custom.js"></script>
-    <script src="../js/countries.js"></script>
 
 </body>
 
