@@ -6,6 +6,7 @@
 
 Project built for the hackathon Make Or Break contest, 2018 edition. 
 
+--- 
 
 ## Team notes
 
@@ -20,6 +21,7 @@ The project is structured as follows:
   * Under `src/api/model dir`, you can find the database schema, which for now, only contains Country. 
   * Under `src/website/`, you can find everything related to the website. In here, you should split javascript and css files. `server.js` will start the website running. This file should define the sitemap's.
 
+--- 
 ### TODOs
 
   * Agree on the schema and redefine the mongo schema.
