@@ -37,14 +37,13 @@
     </div>
 
     <div class="container-fluid">
-
-     <!--
+     
         <header class="box-header">
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span>
                 <span class="box-menu-icon"></span>
             </a>
-        </header> -->
+        </header> 
 
         <!-- nav -->
         <nav>
@@ -81,6 +80,9 @@
 
     </div>
 
+	<span style="align:center"><div id="tableResult"></div></span>
+
+
     <!-- footer -->
     <footer>
         <div class="container-fluid">
@@ -94,16 +96,42 @@
 
         function checkDTA() {
             var url = "http://ownboss.eu:3000/details?src=" + $('#residenceCountrySelector').val() + "&dest=" + $('#incomeCountrySelector').val()
-            
+          
 				$.getJSON(url, function(data){			
 				if (data.details == null){
 					 window.location.href='../views/2screen.html';
 				} else {
-					window.location.href='../views/3screen_info.html';
-					}
-				})
-        }
+				
+					var selectedCountry = data.details.details;
+					var ol = Object.keys(selectedCountry);
 
+					$('#tableResult').html(
+		
+					 "<section style='padding: 0px'>" + 
+					 "<table id='resultArea' style='horizontal-align:center'>" +
+					 "<tr>" +
+						'<th style="text-align:center, color:white">Income Type</th>' +
+						'<th style="text-align:center, color:white">DTA Protocol</th> ' +
+					'</tr>' +
+					'</table>' +
+					'<section>'				
+					)
+
+					for (i=0; i < ol.length; i++) {
+						$('#resultArea').append(
+						"<tr>" +
+							"<td>" + ol[i] + "</td>" + 
+							"<td>" + selectedCountry[ol[i]] + "</td>" +
+						"</tr>"
+						)
+					}
+
+
+
+					}
+			})
+        
+        }
     </script>
 
 

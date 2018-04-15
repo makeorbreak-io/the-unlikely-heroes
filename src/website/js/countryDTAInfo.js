@@ -1,4 +1,4 @@
-var countryDB = [
+ var countryDB = [
 {"country": "Portugal",
 	"agreementCountries":[
         {"country":"UK",
@@ -154,26 +154,12 @@ var countryDB = [
 
 
 $(document).ready(function(){
-var selectedCountry = countryDB[0].agreementCountries[0];
-var ol = Object.keys(selectedCountry);
 
+var country = localStorage.getItem('urlDTAcall');
 
-$('#resultsTable').append(
- "<tr>" +
-'<th style="text-align:left;">Income Type</th>' +
-'<th>DTA Protocol</th> ' +
-'</tr>'
-)
+	console.log(country)
+/*
 
-
-for (i=0; i < ol.length; i++) {
-	$('#resultsTable').append(
-	"<tr>" +
-		"<td >" + ol[i] + "</td>" + 
-		"<td>" + selectedCountry[ol[i]] + "</td>" +
-	"</tr>"
-	)
-}
-
+*/
 })
 
