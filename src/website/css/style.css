@@ -46,6 +46,10 @@ a {
     font-size: 11px;
 }
 
+.table-cell tr td {
+  text-align: left;
+
+}
 /* preloader */
 
 #preloader {
@@ -376,12 +380,28 @@ a {
     margin: 0 auto;
 }
 
-.button{
+.button-go{
     position: absolute;
     top: 67%;
     left: 50%;
     border: 0;
     /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    background-color: red;
+    width: 10%;
+    height: 5%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+.button-again{
+  position: absolute;
+    top: 90%;
+    left: 50%;
+    border: 0;
+       /*bring your own prefixes */
     transform: translate(-50%, -50%);
     background-color: red;
     width: 10%;
@@ -435,7 +455,7 @@ td{
 footer {
     padding: 15px;
     text-align: center;
-    background: blue 
+    background: blue
 }
 
 .copyright {
@@ -447,7 +467,7 @@ footer {
 /* Responsive media queries */
 
 @media (max-width: 991px) {
-    .button{
+    .button-go, .button-again{
         width: 33%;
     }
 }
@@ -466,10 +486,10 @@ footer {
     .box-primary-nav .box-social a {
         font-size: 23px;
     }
-    .button{
+    .button-go, .button-again{
         width: 33%;
     }
-    
+
 }
 
 @media only screen and (max-width: 520px) {
@@ -480,7 +500,7 @@ footer {
         padding: 50px 0;
     }
 
-    .button{
+    .button-go, .button-again{
         width: 33%;
     }
 }
@@ -490,11 +510,14 @@ footer {
         font-size: 12px;
     }
 
-    .button{
+    .button-go{
         width: 33%;
         top: 70%;
     }
-    
+    .button-again {
+      width: 33%;
+    }
+
     th, td {
         padding: 2px;
     }
@@ -502,5 +525,5 @@ footer {
     th{
         font-size: 16px;
     }
-    
+
 }
