@@ -77,7 +77,6 @@
             </div>
         </section>
 
-
     </div>
 
 	<span style="align:center"><div id="tableResult"></div></span>
@@ -104,6 +103,10 @@
 				
 					var selectedCountry = data.details.details;
 					var ol = Object.keys(selectedCountry);
+
+					$('#resultMessage').html(
+					"<h1> RESULT BELOW! </h1>"
+					)
 
 					$('#tableResult').html(
 		
