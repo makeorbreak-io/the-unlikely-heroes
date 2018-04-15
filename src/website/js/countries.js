@@ -182,6 +182,9 @@ residenceSelect.class = "dropdown_selectCountry"
     	}));
 	});
 
+$.getJSON( "http://ownboss.eu:3000/sources", function( data ) {
+  console.log(data)
+});
 
 
 
