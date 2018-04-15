@@ -156,7 +156,7 @@ var countryDB = [
               "commission": "residence state"}]}
 ]
 
-$.getJSON( "http://localhost:3000/sources", function( data ) {
+$.getJSON( "http://ownboss.eu:3000/sources", function( data ) {
 	countryHolderObject = data;
 	
 	for (i=0; i < countryHolderObject.countries.length; i++) {
