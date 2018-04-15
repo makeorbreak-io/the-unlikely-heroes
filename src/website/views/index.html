@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -19,7 +19,7 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    
+
 
 
 </head>
@@ -37,8 +37,8 @@
     </div>
 
     <div class="container-fluid">
-     
-     <!-- 
+
+     <!--
         <header class="box-header">
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span>
@@ -57,6 +57,7 @@
         <!-- end nav -->
 
         <!-- box-intro -->
+
         <section class="box-intro">
             <div class="table-cell">
                 <h4>In which country are you tax resident?</h4>
@@ -73,7 +74,7 @@
 
             <!--       <a href="./2screen.html"><button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button></a>  -->
             <div class="table-cell">
-                <button class="button" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button>
+                <button class="button-go" id="checkDTAButton" onclick="checkDTA()">GO NOW!</button>
             </div>
         </section>
 
@@ -90,35 +91,21 @@
 
 
     <script>
-    
+
         function checkDTA() {
+            var url = "http://ownboss.eu:3000/details?src=" + $('#residenceCountrySelector').val() + "&dest=" + $('#incomeCountrySelector').val()
             
-            var logic = true
-                        
-//            ownboss.eu:3000/details?src=portugal&dest=uk
-         
-            if (logic) {
-
-				console.log("Residence = " + $('#residenceCountrySelector').val() + ", \n" +
-				"income = " +$('#incomeCountrySelector').val())
-
-                //window.location.href='../views/3screen_info.html';
-                
-                
-            } else {
-                //		$("#result").append("<p>There is no DTA</p>")
-				console.log("Residence = " + $('#residenceCountrySelector').val() + ", \n" +
-				"income = " +$('#incomeCountrySelector').val())
-               // window.location.href='../views/2screen.html';
-            }
-      
-
-
-
+				$.getJSON(url, function(data){			
+				if (data.details == null){
+					 window.location.href='../views/2screen.html';
+				} else {
+					window.location.href='../views/3screen_info.html';
+					}
+				})
         }
-                
+
     </script>
-    
+
 
     <!--  plugins -->
     <!-- <script src="../js/menu.js"></script> -->
