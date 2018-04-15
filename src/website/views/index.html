@@ -92,13 +92,25 @@
     <script>
     
         function checkDTA() {
-            if (false) {
+            
+            var logic = Math.random();
+            console.log (logic)
+            
+            if (logic <= 0.5) {
                 //$("#result").append("<p>There is a DTA</p>")
                 console.log("There is a DTA")
+                window.location.href='../views/3screen_info.html';
+                
+                
             } else {
                 //		$("#result").append("<p>There is no DTA</p>")
                 console.log("There is no DTA")
+                window.location.href='../views/2screen.html';
             }
+            
+
+
+
         }
                 
     </script>
