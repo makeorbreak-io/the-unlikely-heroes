@@ -54,6 +54,7 @@ mongoose.connection.on('connected', function () {
  */
 app.get('/hello', require('./routes/testRoute').router); // Just for testing and debugging purposes.
 app.get('/sources', require('./routes/GetAllCountriesRoute').router);
+app.get('/details', require('./routes/GetDetailsOfSourceAndDest').router);
 
 
 /**

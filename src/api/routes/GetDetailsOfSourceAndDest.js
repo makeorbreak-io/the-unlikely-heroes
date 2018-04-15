@@ -13,21 +13,15 @@ let {
  * REST API routes to GET countries. You can retrieve all or find one by id (which is the name)
  * @param {Express application} app is the application that will call this method.
  */
-router.get('/countries', function (req, res) {
-  Country.find({}).then((countries) => {
+router.get('/details', function (req, res) {
+  Country.findOne({
+    'source': req.query.src,
+    'destination': req.query.dest
+  }).then((details) => {
     res.send({
-      countries
+      details
     });
-  }, (err) => {
-    res.status(400).send(err);
-  });
-});
-
-router.get('/sources', function (req, res) {
-  Country.distinct('source').then((countries) => {
-    res.send({
-      countries
-    });
+    console.log(typeof(details));
   }, (err) => {
     res.status(400).send(err);
   });
@@ -35,4 +29,4 @@ router.get('/sources', function (req, res) {
 
 module.exports = {
   router
-}
+};
