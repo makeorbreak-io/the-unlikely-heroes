@@ -2,7 +2,7 @@ var countryDB = [
 {"country": "Portugal",
 	"agreementCountries":[
         {"country":"UK",
-        "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/500344/uk-portugal-dta_-_in_force.pdf",
+        //"url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/500344/uk-portugal-dta_-_in_force.pdf",
         "dateOfAgreement"	: "1968-03-27",
         "dateOfInforcement": "1969-01-17",
         "salary":	"only residence",
@@ -169,7 +169,7 @@ $('#resultsTable').append(
 for (i=0; i < ol.length; i++) {
 	$('#resultsTable').append(
 	"<tr>" +
-		"<td>" + ol[i] + "</td>" + 
+		"<td >" + ol[i] + "</td>" + 
 		"<td>" + selectedCountry[ol[i]] + "</td>" +
 	"</tr>"
 	)
