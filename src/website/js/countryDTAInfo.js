@@ -151,3 +151,29 @@ var countryDB = [
               "pensions":	"Jersey",
               "commission": "residence state"}]}
 ]
+
+
+$(document).ready(function(){
+var selectedCountry = countryDB[0].agreementCountries[0];
+var ol = Object.keys(selectedCountry);
+
+
+$('#resultsTable').append(
+ "<tr>" +
+'<th style="text-align:left;">Income Type</th>' +
+'<th>DTA Protocol</th> ' +
+'</tr>'
+)
+
+
+for (i=0; i < ol.length; i++) {
+	$('#resultsTable').append(
+	"<tr>" +
+		"<td>" + ol[i] + "</td>" + 
+		"<td>" + selectedCountry[ol[i]] + "</td>" +
+	"</tr>"
+	)
+}
+
+})
+

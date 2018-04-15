@@ -93,21 +93,25 @@
     
         function checkDTA() {
             
-            var logic = Math.random();
-            console.log (logic)
-            
-            if (logic <= 0.5) {
-                //$("#result").append("<p>There is a DTA</p>")
-                console.log("There is a DTA")
-                window.location.href='../views/3screen_info.html';
+            var logic = true
+                        
+//            ownboss.eu:3000/details?src=portugal&dest=uk
+         
+            if (logic) {
+
+				console.log("Residence = " + $('#residenceCountrySelector').val() + ", \n" +
+				"income = " +$('#incomeCountrySelector').val())
+
+                //window.location.href='../views/3screen_info.html';
                 
                 
             } else {
                 //		$("#result").append("<p>There is no DTA</p>")
-                console.log("There is no DTA")
-                window.location.href='../views/2screen.html';
+				console.log("Residence = " + $('#residenceCountrySelector').val() + ", \n" +
+				"income = " +$('#incomeCountrySelector').val())
+               // window.location.href='../views/2screen.html';
             }
-            
+      
 
 
 
